@@ -1,0 +1,26 @@
+{% extends "appbts/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Army Formulario</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<form action="{% url 'armyFormulario' %}" method="POST">{% csrf_token  %}
+    <p>Fundadoras: <input type="text" name="resumen"></p>
+    <input type="submit" value="Enviar">
+
+</form>
+
+{% endblock %}
+
+{% block subtitulo %}
+
+<h3> Este es un subtitulo!</h3>
+<p> aca continua mi subtitulo</p>
+
+<h1>{{ mensaje }}</h1>
+
+{% endblock %}

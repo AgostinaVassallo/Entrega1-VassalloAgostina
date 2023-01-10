@@ -1,0 +1,26 @@
+{% extends "appbts/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Bts Formulario</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<form action="{% url 'coreaFormulario' %}" method="POST">{% csrf_token  %}
+    <p>Soft power: <input type="text" name="soft power"></p>
+    <input type="submit" value="Enviar">
+
+</form>
+
+{% endblock %}
+
+{% block subtitulo %}
+
+<h3> Este es un subtitulo!</h3>
+<p> aca continua mi subtitulo</p>
+
+<h1>{{ mensaje }}</h1>
+
+{% endblock %}

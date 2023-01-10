@@ -1,0 +1,21 @@
+{% extends "appbts/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Formulario de Busqueda</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<h3>{{ mensaje }}</h3>
+
+<form action="{% url 'buscar' %}" method="GET"> 
+
+    <input type="text" name="Integrantes" id="Integrantes" placeholder="Inserte integrante">
+
+    <input type="submit" value="Buscar Integrantes">
+
+</form>
+
+{% endblock %}

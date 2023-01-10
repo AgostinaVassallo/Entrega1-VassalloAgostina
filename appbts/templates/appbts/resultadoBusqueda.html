@@ -1,0 +1,19 @@
+{% extends "appbts/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Resultado de Busqueda</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+<h1>Listado de Integrante</h1>
+
+{% for integrantes in integrantes %}
+
+<h3> {{ bts.integrantes }}</h3>
+
+{% endfor %}
+
+{% endblock %}
+
